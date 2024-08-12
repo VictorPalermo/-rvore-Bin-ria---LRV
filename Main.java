@@ -4,10 +4,10 @@ public class Main {
     public static void main(String[] args) {
         ArvoreBinaria arvoreBinaria = new ArvoreBinaria();
         Scanner scanner = new Scanner(System.in);
-        
-            System.out.println("Boas vindas a nossa Árvore Binária!!");
-            String opcao = "10";
-            int num;
+
+        System.out.println("Boas vindas a nossa Árvore Binária!!");
+        String opcao = "10";
+        int num;
         while (!opcao.equals("0")) {
             System.out.println("");
             System.out.println("O que deseja fazer?");
@@ -26,7 +26,7 @@ public class Main {
                     } else{
                         System.out.println("Aqui está sua Árvore Binária (pré-Ordem): ");
                         arvoreBinaria.preOrdem(arvoreBinaria.getRaiz());
-                }
+                    }
                 }
                 case "2" -> {
                     System.out.println("Qual valor você quer adiciona a árvore?");
@@ -46,9 +46,9 @@ public class Main {
                     break;
                 }
                 default -> {
-                System.out.println("Valor inválido. Tente novamente");
+                    System.out.println("Valor inválido. Tente novamente");
+                }
             }
-            }
-        } 
+        }
     }
 }
