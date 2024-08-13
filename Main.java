@@ -4,10 +4,10 @@ public class Main {
     public static void main(String[] args) {
         ArvoreBinaria arvoreBinaria = new ArvoreBinaria();
         Scanner scanner = new Scanner(System.in);
-        
-            System.out.println("Boas vindas a nossa Árvore Binária!!");
-            String opcao = "10";
-            int num;
+
+        System.out.println("Boas vindas a nossa Árvore Binária!!");
+        String opcao = "10";
+        int num;
         while (!opcao.equals("0")) {
             System.out.println("");
             System.out.println("O que deseja fazer?");
@@ -19,36 +19,40 @@ public class Main {
             opcao = scanner.nextLine();
             System.out.println("");
             switch (opcao) {
-                case "1" -> {
+                case "1": {
                     if (arvoreBinaria.getRaiz() == null){
                         System.out.println("Ops, parece que não há nenhum valor na Árvore Binária ainda");
                         System.out.println("Tente adicionar um valor antes de tentar visualizar");
                     } else{
                         System.out.println("Aqui está sua Árvore Binária (pré-Ordem): ");
                         arvoreBinaria.preOrdem(arvoreBinaria.getRaiz());
+                    }
+                    break;
                 }
-                }
-                case "2" -> {
+                case "2": {
                     System.out.println("Qual valor você quer adiciona a árvore?");
                     num = scanner.nextInt();
                     scanner.nextLine();
                     arvoreBinaria.inserir(num);
                     System.out.println("Valor adicionado");
+                    break;
                 }
-                case "3" -> {
+                case "3": {
                     System.out.println("Qual valor você quer remover da árvore?");
                     num = scanner.nextInt();
                     scanner.nextLine();
                     arvoreBinaria.remover(num);
+                    break;
                 }
-                case "0" -> {
+                case "0": {
                     System.out.println("Até a próxima!!");
                     break;
                 }
-                default -> {
-                System.out.println("Valor inválido. Tente novamente");
+                default: {
+                    System.out.println("Valor inválido. Tente novamente");
+                    break;
+                }
             }
-            }
-        } 
+        }
     }
 }
